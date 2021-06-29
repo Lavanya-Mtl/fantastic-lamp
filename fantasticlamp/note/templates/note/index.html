@@ -1,7 +1,16 @@
 {% extends "note/layout.html" %}
 
-{% block body %}
+{% block title %}
+    Note
+{% endblock %}
 
-<h1>Note</h1>
+{% block body %}
+    <h1>Inscriptions</h1>
+
+    <ul>
+        {% for inscription in inscriptions %}
+        <a href="{% url 'inscription' inscription %}"><li>{{ inscription }}</li></a>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
