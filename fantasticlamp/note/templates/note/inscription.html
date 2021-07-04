@@ -1,9 +1,24 @@
 {% extends "note/layout.html" %}
 
 {% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <img src="{{ inscription.cover }}" alt="cover" class="card">
+        </div>
+        <div class="col-md-9">
+            <h1>{{ inscription.title }}</h1>
+            <h5> {{ inscription.desc }}</h5>
+            <div>{{ inscription.content }}</div>
+            <a href="{% url 'note:delete' inscription.id %}">Delete</a>
+            <a href="{% url 'note:update' inscription.id %}">Update</a>
+        </div>
+    </div>
+</div>
 
-<h1>{{ inscription.title }}</h1>
 
-<div>{{ inscription.content }}</div>
+
+
+
 
 {% endblock %}
