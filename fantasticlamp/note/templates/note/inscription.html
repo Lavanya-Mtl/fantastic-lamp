@@ -9,7 +9,7 @@
         <div class="col-md-9">
             <h1>{{ inscription.title }}</h1>
             <h5> {{ inscription.desc }}</h5>
-            <div>{{ inscription.content }}</div>
+            <div>{{ inscription.content | safe | linebreaks }}</div>
             <a href="{% url 'note:delete' inscription.id %}">Delete</a>
             <a href="{% url 'note:update' inscription.id %}">Update</a>
         </div>

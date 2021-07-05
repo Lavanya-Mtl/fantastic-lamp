@@ -6,4 +6,5 @@
         <li>Email: {{ request.user.email }}</li>
     </ul>
     <a href="{% url 'logout' %}">Logout</a>
+    <a href="{% url 'note:index' %}">Note</a>
 {% endblock %}
